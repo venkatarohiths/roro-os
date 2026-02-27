@@ -29,7 +29,8 @@
       <ul id="list"></ul>
     </div>
     <script>
-      const API='http://127.0.0.1:4010';
+      const params = new URLSearchParams(location.search);
+      const API = params.get('api') || localStorage.getItem('RORO_API_BASE') || 'http://127.0.0.1:4010';
       async function load(){
         const r=await fetch(`${API}/v1/commands`); const d=await r.json();
         const ul=document.getElementById('list'); ul.innerHTML='';

@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: roro-api
+    env: node
+    rootDir: apps/api
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run dev
+
+  - type: worker
+    name: roro-worker
+    env: node
+    rootDir: apps/worker
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run dev
+    envVars:
+      - key: API_BASE
+        value: https://roro-api.onrender.com

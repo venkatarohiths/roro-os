@@ -1,0 +1,15 @@
+{
+  "name": "@roro/worker",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/worker.ts"
+  },
+  "dependencies": {
+    "@roro/shared": "file:../../packages/shared"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

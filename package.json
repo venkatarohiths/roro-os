@@ -1,0 +1,15 @@
+{
+  "name": "roro-os",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "echo build-monorepo",
+    "dev": "echo dev-monorepo",
+    "lint": "echo lint-monorepo",
+    "test": "echo test-monorepo"
+  }
+}
